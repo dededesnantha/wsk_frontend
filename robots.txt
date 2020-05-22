@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /public
+Disallow: /index.php
+Sitemap: https://www.baliquadbikeadventure.com/sitemap.xml
