@@ -5,7 +5,7 @@
 
 	echo '<?xml-stylesheet type="text/xsl" href="'. base_url("sitemap.xsl") .'"?>';
 ?>
-<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <?php foreach ($load as $row): ?>
 	<sitemap>
 		<loc><?= $row['loc'] ?></loc>

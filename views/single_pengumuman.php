@@ -1,5 +1,5 @@
 <div class="container">
-<?php foreach ($Pengumuman as $pengumuman): ?>
+<?php foreach ($single_kelas as $pengumuman): ?>
 	<div class="content">
 	<div class="c-12" style="margin: 30px 0px;">
 		<div style="border: 2px solid #333">

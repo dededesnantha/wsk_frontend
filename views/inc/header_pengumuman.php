@@ -8,10 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('asset/template2/css/grid.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('asset/template2/font/style.css') ?>">
   <link rel="stylesheet" href="<?= base_url('asset/template2/css/main.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('asset/template2/slider.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('asset/template2/style.css') ?>">
 
   <script>
     function myFunction() {
@@ -60,7 +57,7 @@
 }
 @media screen and (max-width : 600px){ 
   .show {
-    right: 150px !important;
+    right: 100px !important;
   }
   .dropdown {
     position: relative;
@@ -93,6 +90,10 @@
       <span style="color: #fff;font-size: 25px">
         <?php if ($pengumuman == 'all'){
           echo "Pengumuman Sekolah";
+          }elseif($pengumuman == 'class'){
+            echo "Pengumuman Kelas " . $kelas_name;
+          }else{
+             echo "Page Not Found!!";
           }
         ?>
       </span>
@@ -109,7 +110,7 @@
   </div>
   <div class="dropdown-content-pengumuman" id="myDropdown" style="text-align: center">
     <?php foreach($kelas as $row): ?>
-    <a href="<?= base_url('single_pengumuman').'/'.$row['name'] ?>" style="color: #333;">
+    <a href="<?= base_url('pengumuman') .'/'.$row['name'] ?>" title="<?= $row['name'] ?>" style="color: #333;">
       <div class="text-kelas">
         <span><?= $row['name'] ?></span>
       </div>
